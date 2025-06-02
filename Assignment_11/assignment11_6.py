@@ -1,0 +1,1 @@
+# write a recursive function to calculate sum from 1 to n
