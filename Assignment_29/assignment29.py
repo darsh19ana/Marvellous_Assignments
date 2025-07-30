@@ -20,33 +20,33 @@ print("Basic stats: ",df.describe())
 
 print("Checking for null values: ",df.isnull().sum())
 
-# # Plot the distribution of the target variable (Outcome)
-# df['Outcome'].value_counts().plot(kind='bar', color=['skyblue', 'pink'])
-# plt.title('Distribution of Outcome Variable')
-# plt.xlabel('Outcome')
-# plt.ylabel('Count')
-# plt.grid(axis='y', linestyle='--', alpha=0.7)
-# plt.show()
+# Plot the distribution of the target variable (Outcome)
+df['Outcome'].value_counts().plot(kind='bar', color=['skyblue', 'pink'])
+plt.title('Distribution of Outcome Variable')
+plt.xlabel('Outcome')
+plt.ylabel('Count')
+plt.grid(axis='y', linestyle='--', alpha=0.7)
+plt.show()
 
-# # Plot histogram for each numerical column
-# df.hist(bins=20, figsize=(10, 6), color='lightblue', edgecolor='black')
-# plt.suptitle('Histograms of Features')
-# plt.tight_layout()
-# plt.show()
+# Plot histogram for each numerical column
+df.hist(bins=20, figsize=(10, 6), color='lightblue', edgecolor='black')
+plt.suptitle('Histograms of Features')
+plt.tight_layout()
+plt.show()
 
-# # Plot boxplots for all features
-# plt.figure(figsize=(10, 6))
-# for i, column in enumerate(df.columns[:-1], 1): 
-#     plt.subplot(3, 3, i)
-#     sns.boxplot(y=df[column], color='lightgreen')
-#     plt.title(f'Boxplot of {column}')
-# plt.tight_layout()
-# plt.show()
+# Plot boxplots for all features
+plt.figure(figsize=(10, 6))
+for i, column in enumerate(df.columns[:-1], 1): 
+    plt.subplot(3, 3, i)
+    sns.boxplot(y=df[column], color='lightgreen')
+    plt.title(f'Boxplot of {column}')
+plt.tight_layout()
+plt.show()
 
-# # Pairplot colored by Outcome
-# sns.pairplot(df, hue='Outcome', diag_kind='hist', palette='Set1')
-# plt.suptitle('Pairplot of Features Colored by Outcome')
-# plt.show()
+# Pairplot colored by Outcome
+sns.pairplot(df, hue='Outcome', diag_kind='hist', palette='Set1')
+plt.suptitle('Pairplot of Features Colored by Outcome')
+plt.show()
 
 # data preprocessing
 

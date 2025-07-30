@@ -16,3 +16,6 @@ print(df.isnull().sum())
 df[['Math', 'Science']] = df[['Math', 'Science']].fillna(df[['Math', 'Science']].mean())
 
 print(df.head())
+
+# sir's code
+# df.fillna(df.mean(numeric_only = True), inplace = True)

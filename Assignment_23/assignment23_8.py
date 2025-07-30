@@ -17,3 +17,9 @@ plt.xlabel("Subjects")
 plt.ylabel("Marks")
 
 plt.show()
+
+# sir's code
+# marks = df[df['Name'] == 'Amit'][['Math', 'Science', 'English']].values.flatten()
+# subjects = ['Math', 'Science', 'English']
+
+# plt.plot(subjects, marks, marker='o')
